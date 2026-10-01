@@ -1,6 +1,7 @@
 # Impairment detection
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2609.38276"><img src="https://img.shields.io/badge/arXiv-2609.38276-b31b1b?style=flat-square" alt="arXiv 2609.38276"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Code%20License-MIT-green?style=flat-square" alt="Code License"/></a>
   <a href="LICENSE-CC-BY-4.0.txt"><img src="https://img.shields.io/badge/Data%20License-CC%20BY%204.0-orange?style=flat-square" alt="Data License"/></a>
   <img src="https://img.shields.io/badge/Python-3.10-yellow?style=flat-square" alt="Python 3.10"/>
@@ -8,7 +9,7 @@
 
 ![Sober vs intoxicated riding signatures](img/overview.png)
 
-Code and data to reproduce the results from "Kinematic Signatures of Impairment: Detecting Alcohol Intoxication in E-Scooter Riders Using Sensor Data and Machine Learning" (preprint coming soon).
+Code and data to reproduce the results from ["Kinematic Signatures of Impairment: Detecting Alcohol Intoxication in E-Scooter Riders Using Sensor Data and Machine Learning"](https://arxiv.org/abs/2609.38276) (arXiv preprint).
 
 This was a controlled experiment where participants consumed a low and a higher dose of alcohol, then completed a series of tasks on our e-scooter in a controlled setting while we recorded sensor data. To detect alcohol-induced impairment, we compute per-channel permutation entropy on 7 sensor channels (ax, ay, az, rx, ry, rz, throttle), apply within-subject centering (WSC), and evaluate classification of three conditions (Sober, Low, High) using leave-one-participant-out (LOPO) cross-validation (CV).
 
@@ -24,6 +25,8 @@ This was a controlled experiment where participants consumed a low and a higher 
   - [Classification (LOPO CV, 3-class)](#classification-lopo-cv-3-class)
   - [AuROC (LOPO CV)](#auroc-lopo-cv)
   - [LR coefficient heatmap (LOPO CV)](#lr-coefficient-heatmap-lopo-cv)
+  - [Paper](#paper)
+  - [How to cite](#how-to-cite)
   - [License](#license)
 
 ## Setup
@@ -130,6 +133,26 @@ One-sided test (H1: SD increases with dose) on rank-transformed values. Same pro
 | rx       | 1.465                 |
 | az       | 0.603                 |
 | ay       | 0.469                 |
+
+## Paper
+
+The preprint is available on arXiv: [https://arxiv.org/abs/2609.38276](https://arxiv.org/abs/2609.38276).
+
+## How to cite
+
+If you use this code, data, or ideas in your work, please cite:
+
+```bibtex
+@misc{pai2026kinematicsignaturesimpairmentdetecting,
+      title={Kinematic signatures of impairment: Detecting alcohol intoxication in e-scooter riders using sensor data and machine learning},
+      author={Rahul Rajendra Pai and Marco Dozza and Alexander Rasch and Ali Mohammadi and Marco Capuccini},
+      year={2026},
+      eprint={2609.38276},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2609.38276},
+}
+```
 
 ## License
 - **Code**: [MIT](LICENSE).
